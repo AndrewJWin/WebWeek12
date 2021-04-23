@@ -5,7 +5,7 @@ let path = require("path");
 let app = express();
 
 // Serve Vue client
-app.use(express.static("./student-sign-in/dist"));
+app.use(express.static("./student-sign-in/dist/"));
 
 app.use(express.json());
 
