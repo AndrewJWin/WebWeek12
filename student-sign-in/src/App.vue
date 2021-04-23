@@ -36,14 +36,17 @@ export default {
     StudentMessage
   },
   mounted() {
-    // load all students - make request to API
+    // Load the students by making a request to the API.
     this.updateStudents()
   },
   methods: {
     updateStudents() {
+      // Get all students from the API.
       this.$student_api.getAllStudents().then( students => {
+        // Set the student array.
         this.students = students
       }).catch( err => {
+        // Catch any errors and inform the user.
         console.error('Error getting latest student list', err.response)
         alert('Sorry, unable to fetch student list')
       })
