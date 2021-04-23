@@ -1,17 +1,17 @@
 {
     "development": {
-        "storage": "student.sqlite",
-        "dialect": "sqlite"
+      "storage": "student.sqlite",
+      "dialect": "sqlite"
     },
     "production": {
-        "storage": "DATABASE_URL",
-        "dialect": "postgres",
-        "ssl": true,
-        "dialectOptions": {
-            "ssl": {
-                "require": true,
-                "rejectUnauthorized": false
-            }
+      "use_env_variable": "DATABASE_URL",
+      "dialect": "postgres",
+      "ssl": true,
+      "dialectOptions": {
+        "ssl": {
+          "require": true,
+          "rejectUnauthorized": false
         }
+      }
     }
-}
+  }
